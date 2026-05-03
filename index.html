@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
-<header>
+<header class="fade-in">
     <h1>Website Creation</h1>
     <nav>
         <a href="index.html">Home</a>
@@ -17,12 +23,24 @@
     </nav>
 </header>
 
-<main>
-    <p>Welcome to Group 4's website.</p>
+<!-- HERO SECTION -->
+<section class="hero">
+    <h2 class="fade-in">Welcome to Group 4's Website</h2>
+    <p class="fade-in delay">We build simple and beautiful websites</p>
+
     <a href="about.html">
-        <button>Learn More</button>
+        <button class="btn">Learn More</button>
     </a>
-</main>
+</section>
+
+<!-- INFO SECTION -->
+<section class="info fade-in delay2">
+    <h3>What We Learn</h3>
+    <p>
+        Version control using Git, collaboration using GitHub, 
+        and building responsive websites.
+    </p>
+</section>
 
 <footer>
     <p>© 2026 Website Creation</p>

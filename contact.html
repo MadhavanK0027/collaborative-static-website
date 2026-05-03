@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
-<!-- HERO BANNER -->
-<section class="hero">
+<!-- HERO -->
+<section class="hero contact-hero">
     <h1>Contact Us</h1>
 </section>
 
 <!-- CONTACT SECTION -->
 <section class="contact-section">
 
-    <!-- LEFT -->
-    <div class="contact-left">
+    <!-- LEFT SIDE -->
+    <div class="contact-left fade-in">
         <h2>Get in Touch</h2>
         <p>I’d like to hear from you!</p>
 
@@ -40,23 +46,21 @@
         <p class="address">📍 Chennai, Tamil Nadu, India</p>
     </div>
 
-    <!-- RIGHT FORM -->
+    <!-- RIGHT SIDE FORM -->
     <div class="contact-right">
-        <form>
-            <div class="row">
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-            </div>
+        <form onsubmit="return submitForm()" class="card fade-in delay2">
+            <h2>Send Message</h2>
 
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" class="btn">Send Message</button>
+            <button type="button" class="back-btn" onclick="history.back()">⬅ Back</button>
+
+            <p id="success"></p>
         </form>
     </div>
-     <a href="index.html">
-            <button>Back to Home</button>
-        </a>
 
 </section>
 
@@ -64,6 +68,13 @@
 <footer>
     <p>© 2026 | All Rights Reserved</p>
 </footer>
+
+<script>
+function submitForm() {
+    document.getElementById("success").innerText = "Message sent successfully!";
+    return false;
+}
+</script>
 
 </body>
 </html>
